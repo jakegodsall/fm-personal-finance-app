@@ -6,7 +6,7 @@ import FormInput from "./FormInput";
 export default function LoginForm() {
   return (
     <form className="w-full max-w-[540px] rounded-xl bg-white px-5 py-6 sm:p-8">
-      <h1 className="mb-8 text-2xl font-bold">Login</h1>
+      <h1 className="mb-8 text-2xl font-bold lg:text-3xl">Login</h1>
       <div className="mb-8">
         <div className="mb-8 flex flex-col gap-4">
           <FormInput type="email" label="Email" name="email" />
