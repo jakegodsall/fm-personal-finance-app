@@ -2,7 +2,7 @@ import { Public_Sans } from "next/font/google";
 
 import "./globals.css";
 
-const publicSans = Public_Sans({ subsets: ["latin"], weight: ["400"] });
+const publicSans = Public_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${publicSans} antialiased`}>{children}</body>
+      <body className={`${publicSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
