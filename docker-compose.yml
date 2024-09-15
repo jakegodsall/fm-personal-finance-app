@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: docker/Dockerfile.dev
+    container_name: nextjs-frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
