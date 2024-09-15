@@ -14,7 +14,7 @@ export default function LoginForm() {
         </div>
         <FormButton type="submit">Login</FormButton>
       </div>
-      <p className="text-center text-primary-beige-dark">
+      <p className="text-center text-primary-grey-dark">
         Need to create an account?{" "}
         <Link
           href="sign-up"
