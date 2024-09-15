@@ -5,10 +5,10 @@ import FormButton from "../ui/FormButton";
 
 export default function SignUpForm() {
   return (
-    <form class="bg-white px-5 py-6 rounded-xl">
-      <h1 className="text-2xl font-bold mb-8">Sign Up</h1>
+    <form class="w-full max-w-[540px] rounded-xl bg-white px-5 py-6">
+      <h1 className="mb-8 text-2xl font-bold">Sign Up</h1>
       <div className="mb-8">
-        <div className="flex flex-col gap-4 mb-8">
+        <div className="mb-8 flex flex-col gap-4">
           <FormInput type="text" label="Name" name="name" />
           <FormInput type="email" label="Email" name="email" />
           <FormInput type="password" label="Password" name="password" />
@@ -19,7 +19,7 @@ export default function SignUpForm() {
         Already have an account?{" "}
         <Link
           href="login"
-          className="font-bold underline text-primary-grey-darkest"
+          className="font-bold text-primary-grey-darkest underline"
         >
           Login
         </Link>
