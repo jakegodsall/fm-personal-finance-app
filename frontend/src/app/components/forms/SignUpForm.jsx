@@ -5,7 +5,7 @@ import FormButton from "../ui/FormButton";
 
 export default function SignUpForm() {
   return (
-    <form class="w-full max-w-[540px] rounded-xl bg-white px-5 py-6">
+    <form className="w-full max-w-[540px] rounded-xl bg-white px-5 py-6 sm:p-8">
       <h1 className="mb-8 text-2xl font-bold">Sign Up</h1>
       <div className="mb-8">
         <div className="mb-8 flex flex-col gap-4">

@@ -12,7 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${publicSans.className} antialiased`}>{children}</body>
+      <body
+        className={`${publicSans.className} flex flex-col items-center antialiased`}
+      >
+        <div className="w-full max-w-[1440px]">{children}</div>
+      </body>
     </html>
   );
 }
