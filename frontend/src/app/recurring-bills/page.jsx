@@ -1,0 +1,13 @@
+import RecurringBillList from "./components/RecurringBillList";
+
+export default function RecurringBillsPage() {
+  return (
+    <section className="px-4 py-8">
+      <h1 className="mb-10 text-3xl font-bold">Recurring Bills</h1>
+
+      <div>
+        <RecurringBillList />
+      </div>
+    </section>
+  );
+}
