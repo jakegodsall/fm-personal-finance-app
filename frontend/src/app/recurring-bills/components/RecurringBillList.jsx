@@ -101,7 +101,7 @@ const DUMMY_DATA = [
 
 export default function RecurringBillList() {
   return (
-    <ul className="flex flex-col gap-5">
+    <ul className="flex flex-col divide-y">
       {DUMMY_DATA.map((bill) => {
         return (
           <li key={bill.id}>

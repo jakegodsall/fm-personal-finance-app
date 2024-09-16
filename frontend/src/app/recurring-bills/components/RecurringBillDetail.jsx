@@ -20,13 +20,14 @@ export default function RecurringBillDetail({
   theme,
 }) {
   return (
-    <div className="flex flex-col">
+    <div className="my-5 flex flex-col">
       <div className="mb-2 flex items-center gap-4">
         <Image
           src={icon}
           width={30}
           height={30}
           className={`${themeToClassMap[theme]} rounded-full p-[0.4rem]`}
+          alt="icon"
         />
         <p className="text-sm font-bold">{name}</p>
       </div>

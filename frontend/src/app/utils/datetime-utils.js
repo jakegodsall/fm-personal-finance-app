@@ -2,7 +2,7 @@ export function getOrdinalDay(dateString) {
   const date = new Date(dateString);
   const day = date.getDate();
   function getOrdinalSuffix(day) {
-    if (day > 3 && day < 21) return "th"; // Covers 11th, 12th, 13th
+    if (day > 3 && day < 21) return "th";
     switch (day % 10) {
       case 1:
         return "st";
