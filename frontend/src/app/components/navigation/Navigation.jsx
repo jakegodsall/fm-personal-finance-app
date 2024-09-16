@@ -1,22 +1,29 @@
-import { clsx } from "clsx";
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { clsx } from "clsx";
 
 export default function Navigation({ active }) {
+  const pathName = usePathname();
+  console.log(pathName);
   return (
     <nav className="fixed bottom-0 flex w-full flex-col items-center rounded-t-xl bg-primary-grey-darkest pt-2">
       <ul className="flex w-full max-w-[400px] items-center justify-around px-8 sm:max-w-none">
         <li
           className={clsx(
             "flex flex-col items-center gap-[4px] px-5 pb-4 pt-3",
-            active &&
+            pathName === "/overview" &&
               "box-content rounded-t-xl border-b-4 border-secondary-green bg-primary-beige-light pb-2",
           )}
         >
-          <Link href="overview">
+          <Link href="overview" className="flex flex-col items-center">
             <svg
               className={clsx(
                 "h-5 w-5 fill-current",
-                active ? "text-secondary-green" : "text-primary-grey",
+                pathName === "/overview"
+                  ? "text-secondary-green"
+                  : "text-primary-grey",
               )}
               viewBox="0 0 16 16"
             >
@@ -25,7 +32,9 @@ export default function Navigation({ active }) {
             <p
               className={clsx(
                 "hidden text-[12px] font-bold sm:block",
-                active ? "text-primary-grey-darkest" : "text-primary-grey",
+                pathName === "/overview"
+                  ? "text-primary-grey-darkest"
+                  : "text-primary-grey",
               )}
             >
               Overview
@@ -35,15 +44,17 @@ export default function Navigation({ active }) {
         <li
           className={clsx(
             "flex flex-col items-center gap-[4px] px-5 pb-4 pt-3 sm:w-full sm:max-w-[105px] sm:px-0",
-            active &&
+            pathName === "/budgets" &&
               "box-content rounded-t-xl border-b-4 border-secondary-green bg-primary-beige-light pb-2",
           )}
         >
-          <Link href="budgets">
+          <Link href="budgets" className="flex flex-col items-center">
             <svg
               className={clsx(
                 "h-5 w-5 fill-current",
-                active ? "text-secondary-green" : "text-primary-grey",
+                pathName === "/budgets"
+                  ? "text-secondary-green"
+                  : "text-primary-grey",
               )}
               viewBox="0 0 25 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +64,9 @@ export default function Navigation({ active }) {
             <p
               className={clsx(
                 "hidden text-[12px] font-bold sm:block",
-                active ? "text-primary-grey-darkest" : "text-primary-grey",
+                pathName === "/budgets"
+                  ? "text-primary-grey-darkest"
+                  : "text-primary-grey",
               )}
             >
               Budgets
@@ -63,15 +76,17 @@ export default function Navigation({ active }) {
         <li
           className={clsx(
             "flex flex-col items-center gap-[4px] px-5 pb-4 pt-3 sm:w-full sm:max-w-[105px] sm:px-0",
-            active &&
+            pathName === "/pots" &&
               "box-content rounded-t-xl border-b-4 border-secondary-green bg-primary-beige-light pb-2",
           )}
         >
-          <Link href="pots">
+          <Link href="pots" className="flex flex-col items-center">
             <svg
               className={clsx(
                 "h-5 w-5 fill-current",
-                active ? "text-secondary-green" : "text-primary-grey",
+                pathName === "/pots"
+                  ? "text-secondary-green"
+                  : "text-primary-grey",
               )}
               viewBox="0 0 25 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +96,9 @@ export default function Navigation({ active }) {
             <p
               className={clsx(
                 "hidden text-[12px] font-bold sm:block",
-                active ? "text-primary-grey-darkest" : "text-primary-grey",
+                pathName === "/pots"
+                  ? "text-primary-grey-darkest"
+                  : "text-primary-grey",
               )}
             >
               Pots
@@ -91,15 +108,17 @@ export default function Navigation({ active }) {
         <li
           className={clsx(
             "flex flex-col items-center gap-[4px] px-5 pb-4 pt-3 sm:w-full sm:max-w-[105px] sm:px-0",
-            active &&
+            pathName === "/recurring-bills" &&
               "pb box-content rounded-t-xl border-b-4 border-secondary-green bg-primary-beige-light pb-2",
           )}
         >
-          <Link href="recurring-bills">
+          <Link href="recurring-bills" className="flex flex-col items-center">
             <svg
               className={clsx(
                 "h-5 w-5 fill-current",
-                active ? "text-secondary-green" : "text-primary-grey",
+                pathName === "/recurring-bills"
+                  ? "text-secondary-green"
+                  : "text-primary-grey",
               )}
               viewBox="0 0 25 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +128,9 @@ export default function Navigation({ active }) {
             <p
               className={clsx(
                 "hidden text-center text-[12px] font-bold sm:block",
-                active ? "text-primary-grey-darkest" : "text-primary-grey",
+                pathName === "/recurring-bills"
+                  ? "text-primary-grey-darkest"
+                  : "text-primary-grey",
               )}
             >
               Recurring bills
