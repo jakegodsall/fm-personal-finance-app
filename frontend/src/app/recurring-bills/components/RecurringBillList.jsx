@@ -9,7 +9,7 @@ const DUMMY_DATA = [
     frequency: "monthly",
     next_due_date: "2024-10-01",
     theme: "green",
-    icon: "education",
+    icon: "/recurring-bills-icons/hex.svg",
     created_at: "2024-01-01T09:00:00",
     updated_at: "2024-09-01T10:00:00",
   },
@@ -21,7 +21,7 @@ const DUMMY_DATA = [
     frequency: "monthly",
     next_due_date: "2024-10-03",
     theme: "orange",
-    icon: "spa",
+    icon: "/recurring-bills-icons/stairs.svg",
     created_at: "2024-02-01T09:15:00",
     updated_at: "2024-09-01T11:00:00",
   },
@@ -33,7 +33,7 @@ const DUMMY_DATA = [
     frequency: "monthly",
     next_due_date: "2024-10-05",
     theme: "red",
-    icon: "electricity",
+    icon: "/recurring-bills-icons/circle-dot.svg",
     created_at: "2024-02-10T12:00:00",
     updated_at: "2024-09-01T12:30:00",
   },
@@ -45,7 +45,7 @@ const DUMMY_DATA = [
     frequency: "monthly",
     next_due_date: "2024-10-06",
     theme: "blue",
-    icon: "taxi",
+    icon: "/recurring-bills-icons/triangle.svg",
     created_at: "2024-03-01T10:30:00",
     updated_at: "2024-09-01T13:00:00",
   },
@@ -57,7 +57,7 @@ const DUMMY_DATA = [
     frequency: "monthly",
     next_due_date: "2024-10-12",
     theme: "purple",
-    icon: "games",
+    icon: "/recurring-bills-icons/arrow.svg",
     created_at: "2024-04-01T09:00:00",
     updated_at: "2024-09-01T13:30:00",
   },
@@ -69,7 +69,7 @@ const DUMMY_DATA = [
     frequency: "monthly",
     next_due_date: "2024-10-16",
     theme: "gray",
-    icon: "games",
+    icon: "/recurring-bills-icons/radar.svg",
     created_at: "2024-04-15T09:00:00",
     updated_at: "2024-09-01T14:00:00",
   },
@@ -81,7 +81,7 @@ const DUMMY_DATA = [
     frequency: "monthly",
     next_due_date: "2024-10-22",
     theme: "blue",
-    icon: "gas",
+    icon: "/recurring-bills-icons/string.svg",
     created_at: "2024-05-01T11:00:00",
     updated_at: "2024-09-01T14:30:00",
   },
@@ -93,7 +93,7 @@ const DUMMY_DATA = [
     frequency: "monthly",
     next_due_date: "2024-10-28",
     theme: "red",
-    icon: "restaurant",
+    icon: "/recurring-bills-icons/bread.svg",
     created_at: "2024-06-01T09:00:00",
     updated_at: "2024-09-01T15:00:00",
   },
@@ -101,7 +101,7 @@ const DUMMY_DATA = [
 
 export default function RecurringBillList() {
   return (
-    <ul>
+    <ul className="flex flex-col gap-5">
       {DUMMY_DATA.map((bill) => {
         return (
           <li key={bill.id}>
@@ -110,6 +110,8 @@ export default function RecurringBillList() {
               amount={bill.amount}
               frequency={bill.frequency}
               nextDueDate={bill.next_due_date}
+              icon={bill.icon}
+              theme={bill.theme}
             />
           </li>
         );

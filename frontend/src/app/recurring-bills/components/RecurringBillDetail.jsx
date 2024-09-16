@@ -1,18 +1,36 @@
 import { getOrdinalDay } from "@/app/utils/datetime-utils";
 import { formatAsDollars } from "@/app/utils/currency-utils";
+import Image from "next/image";
+
+const themeToClassMap = {
+  green: "bg-secondary-green",
+  orange: "bg-secondary-yellow",
+  blue: "bg-secondary-cyan",
+  red: "bg-secondary-red",
+  purple: "bg-secondary-purple",
+  gray: "bg-secondary-navy",
+};
 
 export default function RecurringBillDetail({
   name,
   amount,
   frequency,
   nextDueDate,
+  icon,
+  theme,
 }) {
   return (
     <div className="flex flex-col">
-      <div className="flex items-center">
+      <div className="mb-2 flex items-center gap-4">
+        <Image
+          src={icon}
+          width={30}
+          height={30}
+          className={`${themeToClassMap[theme]} rounded-full p-[0.4rem]`}
+        />
         <p className="text-sm font-bold">{name}</p>
       </div>
-      <div class="flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <p className="text-[14px] capitalize text-secondary-green">
           {frequency} - {getOrdinalDay(nextDueDate)}
         </p>
