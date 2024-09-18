@@ -3,10 +3,15 @@
 import os
 import sys
 
-
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+    env = os.getenv('DJANGO_ENV', 'development')
+    if env == 'development':
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings.development')
+    elif env == 'production':
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings.production')
+    else:
+        raise ValueError(f"Unknown DJANGO_ENV: {env}")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
