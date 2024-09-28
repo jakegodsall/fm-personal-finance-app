@@ -41,6 +41,9 @@ class Pot(BaseModel):
 
 
 class RecurringBill(BaseModel):
+    class Meta:
+        verbose_name_plural = 'Recurring Bills'
+
     class FrequencyChoices(models.TextChoices):
         DAILY = 'D', 'Daily'
         WEEKLY = 'W', 'Weekly'
