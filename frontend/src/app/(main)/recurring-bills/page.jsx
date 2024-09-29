@@ -122,7 +122,7 @@ export default function RecurringBillsPage() {
   }, []);
 
   return (
-    <section className="w-full px-4 py-8">
+    <section className="w-full px-4 py-8 sm:px-10">
       <h1 className="mb-10 text-3xl font-bold">Recurring Bills</h1>
 
       {!isMounted && <p>Loading...</p>}
