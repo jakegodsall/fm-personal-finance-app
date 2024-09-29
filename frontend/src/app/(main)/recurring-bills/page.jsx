@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import RecurringBillList from "./components/mobile/RecurringBillList";
 import RecurringBillTable from "./components/tablet/RecurringBillTable";
+import Summary from "./components/Summary";
 
 const DUMMY_DATA = [
   {
@@ -124,6 +125,8 @@ export default function RecurringBillsPage() {
   return (
     <section className="w-full px-4 py-8 sm:px-10">
       <h1 className="mb-10 text-3xl font-bold">Recurring Bills</h1>
+
+      <Summary />
 
       {!isMounted && <p>Loading...</p>}
       {isMounted && isMobile && (
