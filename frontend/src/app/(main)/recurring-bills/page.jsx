@@ -112,7 +112,7 @@ export default function RecurringBillsPage() {
   useEffect(() => {
     setIsMounted(true);
     function handleResize() {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 640);
     }
 
     handleResize();
@@ -126,9 +126,8 @@ export default function RecurringBillsPage() {
     <section className="w-full px-4 py-8 sm:px-10">
       <h1 className="mb-10 text-3xl font-bold">Recurring Bills</h1>
 
-      <Summary />
-
       {!isMounted && <p>Loading...</p>}
+      {isMounted && <Summary />}
       {isMounted && isMobile && (
         <div className="rounded-lg bg-white px-5 sm:hidden">
           <RecurringBillList data={DUMMY_DATA} />

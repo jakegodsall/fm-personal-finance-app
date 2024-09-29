@@ -4,8 +4,8 @@ import SummaryTable from "./SummaryTable";
 
 export default function Summary({ data }) {
   return (
-    <div className="mb-6 flex flex-col gap-3">
-      <div className="flex items-center gap-5 rounded-xl bg-primary-grey-darkest px-5 py-6 text-white">
+    <div className="mb-6 flex w-full flex-col gap-3 sm:flex-row sm:gap-5">
+      <div className="flex items-center gap-5 rounded-xl bg-primary-grey-darkest px-5 py-6 text-white sm:flex-1">
         <svg
           className={"h-10 w-10 stroke-current"}
           viewBox="0 0 25 24"
@@ -18,7 +18,7 @@ export default function Summary({ data }) {
           <p className="text-2xl font-bold">$384.98</p>
         </div>
       </div>
-      <div>
+      <div className="w-full sm:flex-1">
         <SummaryTable />
       </div>
     </div>
