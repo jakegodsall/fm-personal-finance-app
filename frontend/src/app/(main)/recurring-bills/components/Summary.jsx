@@ -4,7 +4,7 @@ import SummaryTable from "./SummaryTable";
 
 export default function Summary({ data }) {
   return (
-    <div>
+    <div className="mb-6 flex flex-col gap-3">
       <div className="flex items-center gap-5 rounded-xl bg-primary-grey-darkest px-5 py-6 text-white">
         <svg
           className={"h-10 w-10 stroke-current"}
